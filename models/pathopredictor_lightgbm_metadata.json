@@ -1,0 +1,84 @@
+{
+  "project": "PathoPredictor reconstruction",
+  "reconstruction_status": "Reconstructed 13-predictor model; not an exact reproduction of the published 28-predictor model.",
+  "model": "LightGBM",
+  "model_selection": {
+    "source_cell": 56,
+    "criterion": "validation ROC-AUC",
+    "validation_roc_auc": 0.9819779329951748,
+    "hyperparameter_tuning": false
+  },
+  "dataset": {
+    "development_variants": 160980,
+    "reserved_test_variants": 40245,
+    "number_of_predictors": 13,
+    "development_benign": 109922,
+    "development_pathogenic": 51058
+  },
+  "feature_names_in_order": [
+    "SIFT_score",
+    "Polyphen2_HDIV_score",
+    "Polyphen2_HVAR_score",
+    "MutationTaster_score",
+    "MutationAssessor_score",
+    "PROVEAN_score",
+    "VEST4_score",
+    "MetaSVM_score",
+    "MetaLR_score",
+    "REVEL_score",
+    "CADD_phred",
+    "DANN_score",
+    "fathmm-XF_coding_score"
+  ],
+  "preprocessing": {
+    "missing_value_strategy": "median",
+    "fitted_on": "development partition only",
+    "scaling": "none",
+    "training_medians": {
+      "SIFT_score": 0.066,
+      "Polyphen2_HDIV_score": 0.469,
+      "Polyphen2_HVAR_score": 0.163,
+      "MutationTaster_score": 0.12,
+      "MutationAssessor_score": 1.625,
+      "PROVEAN_score": -1.55,
+      "VEST4_score": 0.307,
+      "MetaSVM_score": -0.7623,
+      "MetaLR_score": 0.2189,
+      "REVEL_score": 0.206,
+      "CADD_phred": 21.2,
+      "DANN_score": 0.9855109793634957,
+      "fathmm-XF_coding_score": 0.371956
+    }
+  },
+  "classifier_hyperparameters": {
+    "n_estimators": 200,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "objective": "binary",
+    "random_state": 42
+  },
+  "classification_threshold": 0.5,
+  "software_versions": {
+    "python": "3.10.20",
+    "scikit_learn": "1.7.2",
+    "lightgbm": "4.7.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "joblib": "1.5.3"
+  },
+  "methodological_notes": [
+    "Variant-level stratified train/test split.",
+    "Model selected using a separate validation subset.",
+    "Final pipeline refitted on all development variants.",
+    "Test partition excluded from final model fitting.",
+    "Earlier exploratory logistic regression test evaluation was performed in Cell 45.",
+    "Constituent pathogenicity scores may have overlapping training sources with ClinVar labels.",
+    "Gene-level independence and external clinical validity have not been established."
+  ],
+  "saved_utc": "2026-10-23T15:45:25.096000+00:00"
+}

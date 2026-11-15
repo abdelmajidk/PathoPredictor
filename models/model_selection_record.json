@@ -1,0 +1,28 @@
+{
+  "analysis": "PathoPredictor reconstruction",
+  "dataset_status": "Reconstructed dataset; not an exact reproduction of the published 28-predictor dataset",
+  "number_of_predictors": 13,
+  "model_fitting_variants": 128784,
+  "validation_variants": 32196,
+  "reserved_test_variants": 40245,
+  "candidate_models": [
+    "LightGBM",
+    "XGBoost",
+    "Random Forest",
+    "Logistic Regression",
+    "Linear SVM (calibrated)",
+    "KNN (k=5)"
+  ],
+  "primary_selection_metric": "ROC-AUC",
+  "selected_model": "LightGBM",
+  "selected_model_validation_roc_auc": 0.9819779329951748,
+  "selected_model_validation_pr_auc": 0.9658278597594081,
+  "selected_model_validation_f1": 0.9034798444652261,
+  "selected_model_validation_brier_score": 0.045341121956944695,
+  "selected_model_validation_log_loss": 0.1565652110972829,
+  "classification_threshold": 0.5,
+  "random_state": 42,
+  "selection_note": "LightGBM selected provisionally by highest validation ROC-AUC among six baseline algorithms. No hyperparameter tuning was performed.",
+  "test_set_policy": "No further test-set evaluation until model selection and analysis plan are finalized. An earlier exploratory logistic regression test evaluation was performed in Cell 45 and must be disclosed.",
+  "created_utc": "2026-10-23T15:42:02.938034+00:00"
+}

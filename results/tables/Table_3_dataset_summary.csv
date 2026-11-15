@@ -1,0 +1,7 @@
+Dataset Component,Count,Notes
+ClinVar labeled GRCh37 SNVs,1354204,Unique benign/pathogenic candidates
+Matched missense annotation records,203103,Conservative missense filter; duplicates retained
+Unique annotated missense variants,201225,After variant-level deduplication
+Development set (80%),160980,Stratified; includes fitting and validation subsets
+Test set (20%),40245,Stratified; reserved for final evaluation
+Complete cases (13 predictors),86960,Descriptive only; median imputation used for modeling

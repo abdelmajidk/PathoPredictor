@@ -1,0 +1,34 @@
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# Environments and local configuration
+.env
+.env.*
+.venv/
+venv/
+conda-env/
+*.log
+
+# Large upstream source archives
+*.gz
+*.bgz
+*.zip
+*.tar
+*.tar.gz
+*.vcf
+*.vcf.gz
+
+# Temporary execution files
+*.tmp
+*.bak
+*.swp
+
+# Temporary local Jupyter IPC sockets
+kernel-ipc-*
+
+# Exclude unfinished research notebook
+notebooks/PathoPredictor_reproducibility_DRAFT.ipynb

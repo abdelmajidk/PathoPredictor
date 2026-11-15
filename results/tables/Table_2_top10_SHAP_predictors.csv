@@ -1,0 +1,11 @@
+Rank,Feature Name,Mean SHAP Value,Contribution Interpretation
+1,MutationTaster_score,1.3870456996462852,Predicted functional impact of variants
+2,CADD_phred,1.0559613390534461,Integrated variant deleteriousness score
+3,MetaSVM_score,0.6060215337921536,Ensemble pathogenicity prediction
+4,MetaLR_score,0.3794371631170391,Ensemble pathogenicity prediction
+5,VEST4_score,0.3144237625618619,Missense variant effect prediction
+6,fathmm-XF_coding_score,0.25471223394690284,Coding variant functional impact
+7,REVEL_score,0.14349464551420985,Ensemble missense pathogenicity score
+8,MutationAssessor_score,0.12374550249041354,Protein functional impact prediction
+9,SIFT_score,0.1019893277281454,Amino acid substitution tolerance
+10,DANN_score,0.08593975695107922,Neural-network deleteriousness score
