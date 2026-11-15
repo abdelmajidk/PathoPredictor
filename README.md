@@ -39,8 +39,6 @@ published experiment.**
 
 - `notebooks/PathoPredictor_reproducible.ipynb` — reconstructed
   analysis notebook.
-- `notebooks/PathoPredictor_reconstructed.ipynb` — fuller
-  historical reconstruction and exploration.
 - `data/` — derived ClinVar candidate and matched annotation CSVs.
 - `models/` — saved reconstructed model and selection metadata.
 - `results/tables/` — reconstructed results tables.
